@@ -1,0 +1,527 @@
+body {
+    background-color: #001220;
+    margin: 0;
+
+    font-family: 'PT Sans Caption', Arial, sans-serif;
+    color: #3a87bb;
+
+    display: flex;
+    flex-direction: column;
+	min-height: 100%;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*************************
+
+        Шапка - главная
+
+**************************/
+
+.main-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+
+    margin-bottom: 50px;
+}
+
+.main-header .navigation {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.navigation-logo {
+    margin-right: 80px;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+.navigation-list li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.user-action-list {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-link {
+    margin-left: 20px;
+}
+
+.user-action-list a {
+    color: #3a87bb;
+    text-decoration: none;
+}
+
+.user-action-list a:hover {
+    color: #56adeb;
+}
+
+/*************************
+
+        Главная
+
+**************************/
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.features {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/*************************
+
+        Страница входа
+
+**************************/
+
+.reg-pages {
+    align-items: center;
+}
+
+.restore-section {
+    display: none;
+}
+
+.login-password-restore,
+.restore-return {
+    text-decoration: underline;
+    color: #3a87bb;
+}
+
+.restore-return {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-password-restore:hover,
+.restore-return:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-login {
+    top: 120px;
+    left: 50%;
+
+    color: #3a87bb;
+
+    width: 300px;
+    padding: 50px 60px;
+
+    border-radius: 7px;
+}
+
+.input-login-active {
+    display: block;
+}
+
+.input-login .input-description,
+.restore-section .input-description {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-weight: normal;
+    color: #3a87bb;
+}
+
+.input-login p,
+.restore-section p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.input-login form input[type="text"],
+.input-login form input[type="password"],
+.restore-section form input[type="text"] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
+
+    font: inherit;
+    color: #3a87bb;
+    text-transform: uppercase;
+
+    background-color: #082336;
+    border: 2px solid #3a87bb;
+    border-radius: 7px;
+}
+
+.input-login form input:focus,
+.restore-section form input:focus {
+    border-color: #56adeb;
+}
+
+.login-password-info label:hover,
+.login-password-info label:active,
+.restore-section form label:hover,
+.restore-section form input:active {
+    color: #56adeb;
+}
+
+.login-password-info {
+    color: #3a87bb;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 0;
+
+    vertical-align: center;
+}
+
+.login-password-info > label {
+    position: relative;
+
+    padding-left: 25px;
+
+    cursor: pointer;
+}
+
+.login-password-info input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #3a87bb;
+}
+
+.login-password-info input[type="checkbox"]:focus + .checkbox-indicator {
+    border-color: #56adeb;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-password-info input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-password-info input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #3386c2;
+}
+
+.login-password-info input[type="checkbox"]:checked + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.login-password-info input[type="checkbox"]:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+.login-password-restore,
+.reg-pages .registration,
+.restore-return,
+.restore-return-main {
+    color: #84858a;
+    text-decoration: underline;
+
+    text-transform: uppercase;
+    font-size: 13px;
+
+}
+
+.login-password-restore:hover,
+.login-password-restore:focus,
+.reg-pages .registration:hover,
+.reg-pages .registration:focus,
+.restore-return:hover,
+.restore-return:focus,
+.restore-return-main:hover,
+.restore-return-main:active {
+    text-decoration: none;
+}
+
+.reg-pages .registration {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.input-icon-login {
+    background-image: url("../img/user.png");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.input-icon-password {
+    background-image: url("../img/lock.png");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.input-login .button,
+.restore-section .button {
+    font-weight: bold;
+
+    width: 100%;
+
+    color: #082336;
+    text-transform: uppercase;
+
+    background-color: #3de6af;
+    border: none;
+
+    padding: 10px 20px;
+    margin-right: 0;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.input-login .button:hover,
+.input-login .button:active,
+.input-login .button:focus,
+.restore-section .button:hover,
+.restore-section .button:active,
+.restore-section .button:focus {
+    background-color: #00fca8;
+}
+
+.login-error {
+	display: none;
+
+    margin-bottom: 10px;
+    margin-left: 40px;
+    color: #0172c0;
+
+    position: relative;
+}
+
+.login-error::after {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: -40px;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/error.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.restore-section {
+    top: 120px;
+    left: 50%;
+
+    color: #3a87bb;
+
+    width: 300px;
+    padding: 50px 60px;
+
+    border-radius: 7px;
+}
+
+/*************************
+
+        Регистрация
+
+**************************/
+
+.registration-return-login {
+    text-decoration: underline;
+    color: #3a87bb;
+
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-return-login:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.registration-login {
+    top: 120px;
+    left: 50%;
+
+    color: #3a87bb;
+
+    width: 300px;
+    padding: 50px 60px;
+
+    border-radius: 7px;
+}
+
+.registration-login .input-description {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-weight: normal;
+    color: #3a87bb;
+}
+
+.registration-login p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.registration-login form input[type="text"],
+.registration-login form input[type="password"],
+.registration-login form input[type="email"] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
+
+    font: inherit;
+    color: #3a87bb;
+    text-transform: uppercase;
+
+    background-color: #082336;
+    border: 2px solid #3a87bb;
+    border-radius: 7px;
+}
+
+.registration-login form input:focus {
+    border-color: #56adeb;
+}
+
+.registration-login label:hover,
+.registration-login label:active {
+    color: #56adeb;
+}
+
+.registration-return-login {
+    color: #84858a;
+    text-decoration: underline;
+
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.registration-return-login:hover,
+.registration-return-login:focus {
+    text-decoration: none;
+}
+
+.registration-icon-login {
+    background-image: url("../img/user.png");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.registration-icon-password {
+    background-image: url("../img/lock.png");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.registration-icon-email {
+    background-image: url("../img/mail.png");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.registration-login .button {
+    font-weight: bold;
+
+    width: 100%;
+
+    color: #082336;
+    text-transform: uppercase;
+
+    background-color: #3de6af;
+    border: none;
+
+    padding: 10px 20px;
+    margin-right: 0;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.registration-login .button:hover,
+.registration-login .button:active,
+.registration-login .button:focus {
+    background-color: #00fca8;
+}
+
+.login-error {
+	display: none;
+
+    margin-bottom: 10px;
+    margin-left: 40px;
+    color: #0172c0;
+
+    position: relative;
+}
+
+.login-error::after {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: -40px;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/error.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}

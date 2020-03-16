@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AlgoSimulator - главная</title>
+    <link rel="stylesheet" href="{% static 'homepage/main.css' %}">
+</head>
+<body class="body-container">
+    <header class="main-header">
+        <nav class="navigation">
+            <img class="navigation-logo" src="img/index-logo.svg" width="40" height="40" alt="Логотип сайта">
+            <ul class="navigation-list">
+                <li>
+                    <span class="navigation-list-title">Для</span>
+                    <span class="navigation-list-description">Бизнесменов</span>
+                </li>
+                <li>
+                    <span class="n avigation-list-title">Для</span>
+                    <span class="navigation-list-description">Аналитиков</span>
+                </li>
+                <li>
+                    <span class="navigation-list-title">Для</span>
+                    <span class="navigation-list-description">Специалистов IT</span>
+                </li>
+                <li>
+                    <span class="navigation-list-title">Для</span>
+                    <span class="navigation-list-description">Вашей компании</span>
+                </li>
+            </ul>
+            {% if user.is_authenticated %}
+              <ul class="user-action-list">
+                  <li><a class="user-link" href={% url 'exit' %}>Выйти</a></li>
+                  <li><a class="user-link" href={% url 'profile' %}>Профиль</a></li>
+              </ul>
+            {% else %}
+              <ul class="user-action-list">
+              <li><a class="user-link" href={% url 'auth' %}>Войти</a></li>
+              <li><a class="user-link" href={% url 'reg' %}>Регистрация</a></li>
+              </ul>
+            {% endif %}
+        </nav>
+    </header>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
