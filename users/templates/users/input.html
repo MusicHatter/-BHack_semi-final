@@ -1,0 +1,39 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AlgoSimulator - вход</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'homepage/main.css' %}">
+</head>
+<body class="reg-pages">
+    <section class="input-login">
+        <h2>Войти</h2>
+        <p class="input-login-description">Введите пожалуйста свой логин и пароль</p>
+        <form name="user-logging" method="POST">
+          {% csrf_token %}
+          {{ form|crispy }}
+            <input class="button" type="submit" name="submit-input" value="Войти">
+        </form>
+        <a class="registration" href="{% url 'reg' %}">Зарегистрироваться!</a>
+        <a class="restore-return-main" href="{% url 'page-home' %}">На главную</a>
+    </section>
+    <section class="restore-section">
+        <h2>Восстановить пароль</h2>
+        <form name="user-restore" action="#" method="POST">
+            <p>
+                <label class="visually-hidden" for="user-restore-email">Введите почту, указанную при регистрции</label>
+                <input class="icon-restore-email-input" id="user-restore-email" name="email" type="text" placeholder="E-mail" required>
+            </p>
+            <input class="button" type="submit" name="submit-restore" value="Восстановить">
+        </form>
+        <a class="restore-return">Вернуться к вводу данных</a>
+        <a class="restore-return-main" href="index.html">На главную</a>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
