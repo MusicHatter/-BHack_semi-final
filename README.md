@@ -8,3 +8,6 @@
 - Хранилище
 - Модуль создания и редактирования кода алгоритма
 - Модуль авторизации и аутентификации
+
+![main](https://i.imgur.com/RNACNv9.png)
+![input](https://i.imgur.com/Z5mgLou.png)
